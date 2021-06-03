@@ -1,14 +1,17 @@
-#include<iostream>
+//#include<iostream>
 #include<Windows.h>
 #include<wingdi.h>
+#include"Game.h"
 
- using namespace std;
+ //using namespace std;
 
 	void font();
 
 	int main()
 {
 	font();
+	Game game;
+	cout<<game;
 	/*AddFontResourceA("Call Of Ops Duty.otf");
 	cout<<"Hashim";*/
 	return 0;
@@ -23,7 +26,7 @@
 	cfi.dwFontSize.Y = 24;                  // Height
 	cfi.FontFamily = FF_DONTCARE;
 	cfi.FontWeight = FW_NORMAL;
-	std::wcscpy(cfi.FaceName, L"Lucida Console"); // Choose your font
+	wcscpy(cfi.FaceName, L"Lucida Console"); // Choose your font
 	SetCurrentConsoleFontEx(GetStdHandle(STD_OUTPUT_HANDLE), FALSE, &cfi);
-	std::cout << "Font: Consolas, Size: 24\n";
+	//std::cout << "Font: Consolas, Size: 24\n";
 }

@@ -10,15 +10,15 @@
 
  public:
 	Game();
-	Game(int**,int);
+	Game(int);
 	Game(const Game &);
-	virtual void set_points(int)=0;
+	//virtual void set_points(int);
 	int** get_game_board();
 	int get_size();
-	virtual int get_points()=0;
-	friend ostream operator << (ostream &,const Game &);
-	friend istream operator >> (istream &,Game &);
-	virtual bool win_check()=0;
+	//virtual int get_points();
+	friend ostream & operator << (ostream &,const Game &);
+	//friend istream operator >> (istream &,Game &);
+	//virtual bool win_check();
 	~Game();
 };
 
