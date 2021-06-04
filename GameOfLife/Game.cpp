@@ -84,8 +84,11 @@
 {
 	int index=0;
 	int index2=0;
+	cout<<endl<<endl<<endl<<endl;
+	//cout<<"\t\t\t";
 	for(index=0;index<game.size;index++)
 	{
+		cout<<"\t\t\t";
 		if((index==0)||(index==(game.size-1)))
 			for(index2=game.size-1;index2>=0;index2--)
 			{ 
@@ -96,7 +99,7 @@
 			{ 
 				out<<*(*(game.game_board+index)+index2)<<"\t";
 			}
-		cout<<endl<<endl<<endl;
+		cout<<endl<<endl<<endl<<endl;
 	}
 	return out;
 }
