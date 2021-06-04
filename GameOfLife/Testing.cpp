@@ -12,6 +12,7 @@
 {
 	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE),CONSOLE_FULLSCREEN_MODE,0);
 	font();
+	cout << "1" << endl;
 	Game game;
 	cout<<game;
 	/*AddFontResourceA("Call Of Ops Duty.otf");
