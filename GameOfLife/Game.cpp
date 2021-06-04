@@ -1,5 +1,12 @@
 #include"Game.h"
 
+	const char TB = '\xCD';
+	const char LR = '\xBA'; 
+	const char TL = '\xC9'; 
+	const char TR = '\xBB'; 
+	const char BL = '\xC8'; 
+	const char BR = '\xBC'; 
+
 	Game::Game()
 {
 	size=5;
@@ -84,22 +91,46 @@
 {
 	int index=0;
 	int index2=0;
+	string h_line(41,TB);
+	string v_line(1,LR);
+	string l_edge(1,TL);
+	string r_edge(1,TR);
 	cout<<endl<<endl<<endl<<endl;
-	//cout<<"\t\t\t";
+	cout<<"\t\t\t\b\b";
+	cout<<l_edge;
+	cout<<h_line<<r_edge<<endl;
 	for(index=0;index<game.size;index++)
 	{
-		cout<<"\t\t\t";
+		cout<<"\t\t\t\b\b"<<v_line;
 		if((index==0)||(index==(game.size-1)))
+		{ 
 			for(index2=game.size-1;index2>=0;index2--)
 			{ 
-				out<<*(*(game.game_board+index)+index2)<<"\t";
+				out<<*(*(game.game_board+index)+index2)<<"\t"<<v_line;;
 			}
+		}
 		else
 			for(index2=0;index2<game.size;index2++)
 			{ 
-				out<<*(*(game.game_board+index)+index2)<<"\t";
+				out<<*(*(game.game_board+index)+index2)<<"\t"<<v_line;
 			}
-		cout<<endl<<endl<<endl<<endl;
+		cout<<endl<<"\t\t\t\t\b\b";
+		for(index2=0;index2<game.size;index2++)
+		{
+			cout<<v_line<<"\t";
+		}
+		cout<<endl<<"\t\t\t\b\b";
+		for(index2=0;index2<game.size;index2++)
+		{
+			cout<<v_line<<"\t";
+		}
+		cout<<endl<<"\t\t\t\b\b";
+		for(index2=0;index2<game.size;index2++)
+		{
+			cout<<v_line<<"\t";
+		}
+		cout<<endl;
+		//cout<<endl<<"\t\t\t\b\b"<<v_line<<endl<<"\t\t\t\b\b"<<v_line<<h_line<<endl;
 	}
 	return out;
 }
