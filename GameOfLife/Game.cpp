@@ -31,21 +31,6 @@
 				*(*(game_board+index)+index2)=index3+1;
 		}
 	}
-	for(index=0;index<4;index++)
-		helping_objects[0]=new char [7];
-	strcpy(helping_objects[0],"Sword");
-	strcpy(helping_objects[1],"Shield");
-	strcpy(helping_objects[2],"Water");
-	strcpy(helping_objects[3],"key");
-	for(index=0;index<4;index++)
-		hurdles[0]=new char [7];
-	strcpy(hurdles[0],"Fire");
-	strcpy(hurdles[1],"Fire");
-	strcpy(hurdles[2],"Fire");
-	strcpy(hurdles[3],"Fire");
-	strcpy(hurdles[4],"Fire");
-
-
 }
 	Game::Game(int size)
 {
