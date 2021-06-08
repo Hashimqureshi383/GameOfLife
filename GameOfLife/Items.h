@@ -7,5 +7,4 @@
 	Items();
 	Items(int,int);
 	Items(const Items &);
-	virtual void get_
 };
