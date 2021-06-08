@@ -1,4 +1,4 @@
-	class Items
+class Items
 {
 	int number_of_items;
 	int points;
