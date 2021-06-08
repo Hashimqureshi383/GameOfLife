@@ -5,8 +5,7 @@
 	class Game
 {
 	int** game_board;
-	int size;
-	int points;
+	
 	char* helping_objects[4];
 	char* hurdles[5];
 	bool h_objects[4];
