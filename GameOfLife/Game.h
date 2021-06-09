@@ -5,11 +5,9 @@
 	class Game
 {
 	int** game_board;
-	
-	char* helping_objects[4];
-	char* hurdles[5];
-	bool h_objects[4];
-	bool hrdles[5];
+	int size;
+	int* helping_objects;
+	int* hurdles;
 
  public:
 	Game();
