@@ -1,4 +1,5 @@
 #include"Game.h"
+#include<conio.h>
 #include<Windows.h>
 
 	const char TB = '\xCD';
@@ -87,6 +88,11 @@
 	int Game::get_size()
 {
 	return size;
+}
+	bool Game::play_turn(Player &player)
+{
+	_getch();
+	if()
 }
 	ostream & operator << (ostream &out,const Game &game)
 {
