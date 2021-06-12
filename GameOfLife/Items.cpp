@@ -5,9 +5,9 @@ Items::Items()
 	number_of_items = 0;
 	points =0;
 }
-Items::Items(int no_p, int p)
+Items::Items(int no_thing, int p)
 {
-	number_of_items = no_p;
+	number_of_items = no_thing;
 	points = p;
 }
 Items::Items(const Items& obj)
