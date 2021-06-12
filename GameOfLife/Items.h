@@ -1,3 +1,4 @@
+#pragma once
 class Items
 {
 	int number_of_items;

@@ -31,6 +31,14 @@
 {
 	helping_objects=arr;
 }
+	void Player::set_step(int step)
+{
+	this->step=step;
+}
+	int Player::get_step()
+{
+	return step;
+}
 	string Player::get_name()
 {
 	return name;
@@ -66,7 +74,7 @@
 	num=_getch();
 	if((num>0)&&(num<5))
 	{
-		if (get_points()>0)
+		if(get_points()>0)
 		{
 			*(helping_objects+num-1)=true;
 			return true;

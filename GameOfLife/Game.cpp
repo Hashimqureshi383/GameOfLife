@@ -1,6 +1,8 @@
 #include"Game.h"
 #include<conio.h>
 #include<Windows.h>
+#include<cstdlib>
+#include<ctime>
 
 	const char TB = '\xCD';
 	const char LR = '\xBA'; 
@@ -16,9 +18,11 @@
 	int index2=0;
 	int index3=0;
 	game_board=new int* [size];
+	coins=new int* [size];
 	for(index=0;index<size;index++)
 	{
 		*(game_board+index)=new int [size];
+		*(coins+index)=new int [size] {0};
 	}
 	for(index=0,index3=0;index<size;index++)
 	{
@@ -32,6 +36,7 @@
 				*(*(game_board+index)+index2)=index3+1;
 		}
 	}
+	hurdles=new int [size*size];
 }
 	Game::Game(int size)
 {
@@ -92,7 +97,42 @@
 	bool Game::play_turn(Player &player)
 {
 	_getch();
-	if()
+	int index=0;
+	for(index=0;index<coin_cell_size;index++)
+	{ 
+		if((player.get_step()+1)==coin_cells[index])
+		{
+			if((*(*(coins+coin_cells[index]/size))+coin_cells[index])==1)
+			{
+				player.set_points(player.get_points()+5);
+			}
+			else
+				player.set_points(player.get_points()+10);
+	}
+	player.set_step(player.get_step()+1);
+	return true;
+}
+	bool Game::set_coins()
+{
+	srand(time(0));
+	int no_coins=0;
+	int index=0;
+	int index1=0;
+	int index2=0;
+	int temp=0;
+	no_coins=rand()%(size+1)+size-1;
+	coin_cells=new int [no_coins];
+	coin_cell_size=no_coins;
+	for(index=0,index2=0;index<size;index++)
+	{
+		for(index1=0;index<(no_coins/size);index1++,index2++)
+		{
+			temp=rand()%size;
+			*(*(coins+index)+temp)=rand()%2+1;
+			*(coin_cells+index2)=temp;
+		}
+	}
+	return true;
 }
 	ostream & operator << (ostream &out,const Game &game)
 {

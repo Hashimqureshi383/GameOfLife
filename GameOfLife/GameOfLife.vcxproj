@@ -145,6 +145,7 @@
     <ClCompile Include="Testing.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="coins.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Items.h" />
     <ClInclude Include="Player.h" />
