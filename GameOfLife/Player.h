@@ -3,7 +3,7 @@
 
  using namespace std;
 
-	class Player:public Items
+class Player:public Items
 {
 	string name;
 	bool* hurdles;
