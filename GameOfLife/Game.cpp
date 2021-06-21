@@ -11,7 +11,7 @@
 	const char BL = '\xC8'; 
 	const char BR = '\xBC'; 
 
-	Game::Game()
+Game::Game()
 {
 	size=5;
 	int index=0;
@@ -36,9 +36,9 @@
 				*(*(game_board+index)+index2)=index3+1;
 		}
 	}
-	hurdles=new int [size*size];
+	hurdles=new int [size*size];  //
 }
-	Game::Game(int size)
+Game::Game(int size)
 {
 	int index=0;
 	int index2=0;
@@ -62,7 +62,7 @@
 		}
 	}
 }
-	Game::Game(const Game &game)
+Game::Game(const Game &game)
 {
 	int index=0;
 	int index2=0;
@@ -86,33 +86,34 @@
 		}
 	}
 }
-	int** Game::get_game_board()
+int** Game::get_game_board()
 {
 	return game_board;	
 }
-	int Game::get_size()
+int Game::get_size()
 {
 	return size;
 }
-	bool Game::play_turn(Player &player)
+bool Game::play_turn(Player &player)
 {
 	_getch();
 	int index=0;
-	for(index=0;index<coin_cell_size;index++)
-	{ 
-		if((player.get_step()+1)==coin_cells[index])
+	for (index = 0; index < coin_cell_size; index++)
+	{
+		if ((player.get_step() + 1) == coin_cells[index])
 		{
-			if((*(*(coins+coin_cells[index]/size))+coin_cells[index])==1)
+			if ((*(*(coins + coin_cells[index] / size)) + coin_cells[index]) == 1)
 			{
-				player.set_points(player.get_points()+5);
+				player.set_points(player.get_points() + 5);
 			}
 			else
-				player.set_points(player.get_points()+10);
+				player.set_points(player.get_points() + 10);
+		}
+		player.set_step(player.get_step() + 1);
+		return true;
 	}
-	player.set_step(player.get_step()+1);
-	return true;
 }
-	bool Game::set_coins()
+bool Game::set_coins()
 {
 	srand(time(0));
 	int no_coins=0;
@@ -134,7 +135,7 @@
 	}
 	return true;
 }
-	ostream & operator << (ostream &out,const Game &game)
+ostream & operator << (ostream &out,const Game &game)
 {
 	int index=0;
 	int index2=0;
@@ -200,7 +201,7 @@
 //{
 //	
 //}
-	Game::~Game()
+Game::~Game()
 {
 	int index=0;
 	if(game_board!=0)

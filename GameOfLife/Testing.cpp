@@ -6,9 +6,9 @@
 
  //using namespace std;
 
-	void font();
+void font();
 
-	int main()
+int main()
 {
 	SetConsoleDisplayMode(GetStdHandle(STD_OUTPUT_HANDLE),CONSOLE_FULLSCREEN_MODE,0);
 	font();

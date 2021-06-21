@@ -31,7 +31,7 @@ int  Items::get_points()
 {
 	return points;// returning points the player has 
 }
-void Items::print()
+//void Items::print()
 {
 	
 }

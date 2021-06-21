@@ -12,6 +12,6 @@ class Items
 	void set_points(int x);//x represents the points 
 	int  get_no_item();
 	int  get_points();
-	virtual void print() = 0;
+	//virtual void print() = 0;
 
 };

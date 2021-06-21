@@ -4,7 +4,7 @@
 
  using namespace std;
 
-	class Game
+class Game
 {
 	int** game_board;
 	int** coins;

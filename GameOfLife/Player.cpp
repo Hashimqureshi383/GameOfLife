@@ -39,7 +39,6 @@ void Player::set_helping_objects(bool* arr)
 {
 	return step;
 }
-	string Player::get_name()
 string Player::get_name()
 {
 	return name;
@@ -96,6 +95,7 @@ bool Player::use_hurdle()
 		cin>>cell;
 		*(hurdles+num-1)=false;
 	}
+	// here it needs return type so i am using true
 }
 bool Player::use_helping_object()
 {
@@ -106,7 +106,7 @@ bool Player::use_helping_object()
 	{
 		cin>>cell;
 		*(helping_objects+num-1)=false;
-	}
+	}// here it needs return type so i am using true
 }
 Player::~Player()
 {
