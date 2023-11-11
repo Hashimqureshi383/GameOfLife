@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden; /* Hide horizontal overflow */
+    position: relative;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Prevent menu items from wrapping to the next line */
+}
+
+.menu-list li {
+    display: inline-block; /* Display menu items horizontally */
+    margin: 0 10px;
+}
+
+.menu-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#scroll-left {
+    left: 10px;
+}
+
+#scroll-right {
+    right: 10px;
+}
